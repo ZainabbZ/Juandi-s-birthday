@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Juandi!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        #rain-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes pulse-light {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        .animate-pulse-light {
+            animation: pulse-light 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-100 antialiased" style="background-image: url('https://e7.pngegg.com/pngimages/473/267/png-clipart-gradient-desktop-color-background-miscellaneous-blue-thumbnail.png'); background-size: cover; background-position: center; background-attachment: fixed; background-color: #0c1440;">
+
+    <canvas id="rain-canvas"></canvas>
+    
+    <audio id="birthday-song" loop>
+        <source src="Je te laisserai des mots.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="play-prompt" class="fixed bottom-0 right-0 p-4 m-4 bg-black bg-opacity-50 text-white rounded-lg transition-opacity duration-500 z-50 animate-pulse">
+        Haz clic para la música 🎵
+    </div>
+
+    <div class="container mx-auto max-w-5xl p-6 py-12 md:py-24">
+
+        <header class="text-center mb-16 md:mb-24">
+            <h1 class="text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4">
+                ¡Feliz Cumpleaños, Juandi!
+            </h1>
+            <p class="text-2xl md:text-4xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                Hoy no es un día cualquiera. Hoy celebramos 34 años de tu increíble existencia.
+                <span class="block mt-4">
+                    Felices 34, querido Juandi. Que este nuevo capítulo de tu vida te traiga la mayor de las alegrías, serenidad y todo aquello que tu corazón anhela.
+                    <span class="text-pink-400 font-semibold animate-pulse-light">Te quiero.</span>
+                </span>
+            </p>
+        </header>
+
+        <div class="fade-in-section text-center py-12 border-b border-gray-700">
+            <img src="https://img.birthdayyou.com/templates/thumbnail/happy-birthday-with-funny-white-cat-86707.gif" 
+                 alt="Un gato blanco gracioso deseando feliz cumpleaños"
+                 class="mx-auto rounded-2xl shadow-xl w-full max-w-md"
+                 onerror="this.src='https://placehold.co/480x480/374151/E5E7EB?text=Gatito+Gracioso+de+Cumpleaños'"/>
+        </div>
+
+        <div class="fade-in-section py-16 border-b border-gray-700">
+            <h2 class="text-3xl font-bold text-blue-300 mb-4 text-center">El Rincón de Poesía, Para un Alma Profunda</h2>
+            <blockquote class="border-l-4 border-blue-400 pl-4 mb-4 max-w-2xl mx-auto">
+                <p class="text-xl italic text-gray-200 leading-relaxed">
+                    "Quiero hacer contigo lo que la primavera hace con los cerezos."
+                </p>
+                <cite class="block text-right text-gray-400 mt-2 not-italic">~ Pablo Neruda</cite>
+            </blockquote>
+            <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto text-center mt-6">
+                Sabes que la poesía es más que palabras en una página; es el aliento del alma, el eco de los sentimientos más profundos. Para el poeta innato que llevas dentro, para ese espíritu que encuentra belleza y significado en cada verso, te deseo que este nuevo año esté rebosante de inspiración. Que encuentres nuevas musas en cada rincón, que tus pensamientos se transformen en metáforas y que la vida te regale poemas sin fin, listos para ser descubiertos y vividos. Que cada día sea un verso y cada año, una estrofa magistral.
+                <span class="text-green-400 font-semibold ml-1 animate-pulse-light">Te quiero.</span>
+            </l>
+        </div>
+
+        <div class="fade-in-section py-16 border-b border-gray-700">
+            <h2 class="text-3xl font-bold text-green-300 mb-4 text-center">Un Mensaje de Tu Fiel Compañero, Borreguito</h2>
+            <p class="text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+                Guau, guau, Juandi. Es Borreguito aquí. Sé que no siempre puedo decírtelo con palabras, pero mi corazón ladra de gratitud por tenerte. Eres mi mundo entero, el que me da mis paseos, mis caricias, mi comida y ese lugar calentito a tus pies donde me siento más seguro que en cualquier otro sitio. Cada vez que me miras y me hablas, siento todo tu amor, y es lo que me hace el perro más feliz del universo. Gracias por cada juego, por cada siesta juntos, por cada vez que me dejas lamer tu cara (aunque a veces frunzas el ceño, sé que te gusta un poco). Eres el mejor papá humano que un perro podría desear. Mi cola no deja de moverse de alegría solo con pensar en ti. Espero que este día sea tan especial y lleno de felicidad para ti como tú haces mis días, cada día. ¡Feliz cumpleaños, mi Juandi! Siempre estaré aquí, a tu lado, incondicionalmente.
+                <span class="font-bold text-white block mt-4 text-center">¡Te quiero mucho, mucho, mucho!</span>
+            </p>
+        </div>
+
+        <div class="fade-in-section py-16 border-b border-gray-700">
+            <h2 class="text-3xl font-bold text-purple-300 mb-6 text-center">El Top 3 del Cinéfilo: Historias que Dejan Huella</h2>
+            <p class="text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto text-center">
+                Para el alma que encuentra en la gran pantalla no solo entretenimiento, sino también reflejos de la vida, espejos del alma y ventanas a otras realidades. Tus películas favoritas no son solo películas; son experiencias que resuenan contigo, que te invitan a la reflexión y que, estoy seguro, han dejado una marca indeleble en tu corazón. Aquí recordamos algunas de ellas, con la esperanza de que sigas encontrando magia en cada fotograma.
+                <span class="text-pink-300 font-semibold ml-1 animate-pulse-light">Te quiero.</span>
+            </p>
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Yi Yi <span class="text-purple-400 text-sm italic">(Un día y otro día)</span></h3>
+                    <blockquote class="border-l-4 border-purple-400 pl-4">
+                        <p class="text-lg italic text-gray-300 mt-1 leading-relaxed">
+                            "My uncle says we live three times as long since man invented movies. It means movies give us twice what we get from daily life."
+                        </p>
+                        <p class="text-gray-400 mt-2">
+                            Una profunda reflexión sobre la vida, las oportunidades perdidas y la belleza de lo cotidiano. Que cada nuevo año te permita ver el mundo desde nuevas y fascinantes perspectivas, tal como esta joya cinematográfica lo hace.
+                        </p>
+                    </blockquote>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Amores Perros</h3>
+                    <blockquote class="border-l-4 border-purple-400 pl-4">
+                        <p class="text-lg italic text-gray-300 mt-1 leading-relaxed">
+                            "Para salvar a un ser amado, ¿hasta dónde eres capaz de llegar?"
+                        </p>
+                        <p class="text-gray-400 mt-2">
+                            Un crudo y poderoso recordatorio de los lazos que nos unen y la intensidad del amor, incluso en las circunstancias más difíciles. Que siempre sientas la fuerza de los amores que te rodean.
+                        </d>
+                    </blockquote>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">Blue Valentine</h3>
+                    <blockquote class="border-l-4 border-purple-400 pl-4">
+                        <p class="text-lg italic text-gray-300 mt-1 leading-relaxed">
+                            "I'm so in love with you. I'm not sure what to do."
+                        </p>
+                        <p class="text-gray-400 mt-2">
+                            La complejidad del amor, su evolución y sus desafíos. Que este año te traiga una claridad reconfortante en tus propios sentimientos y relaciones.
+                        </p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="fade-in-section py-16 border-b border-gray-700">
+            <h2 class="text-3xl font-bold text-red-300 mb-6 text-center">Un Poema Más Allá de las Fronteras, Para Ti</h2>
+            <p class="text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto text-center">
+                Recuerdo cuánto aprecias la belleza de las palabras, y cómo te gusta cuando comparto contigo un pedacito de la riqueza cultural que me rodea. Este poema, de uno de los más grandes poetas árabes, Nizar Qabbani, es un reflejo de ese deseo de expresar lo inexpresable, de crear algo único para alguien único. Que su melodía y su significado resuenen en tu corazón.
+                <span class="text-red-400 font-semibold ml-1 animate-pulse-light">Te quiero.</span>
+            </p>
+            <blockquote class="text-center max-w-3xl mx-auto">
+                <p class="text-3xl md:text-4xl text-white mb-4 leading-relaxed" dir="rtl">
+                    "أُريدُ أن أكتُبَ لكِ كلاماً<br>
+                    لا يُشبِهُ الكلامْ<br>
+                    وأخترعُ لُغةً لكِ وحدكِ"
+                </r>
+                <p class="text-lg italic text-gray-400 leading-relaxed">
+                    "Uridu an aktuba laki kalam-an<br>
+                    la yushbihu al-kalam<br>
+                    wa akhtari'u lughatan laki wahdaki"
+                </p>
+                <p class="text-lg md:text-xl text-gray-200 mt-4 leading-relaxed">
+                    "I want to write words for you<br>
+                    that are unlike any other words<br>
+                    and invent a language for you alone."
+                </p>
+                <cite class="block text-right text-gray-400 mt-4 not-italic">~ Nizar Qabbani</cite>
+            </blockquote>
+        </div>
+
+        <section class="fade-in-section text-center py-16 border-b border-gray-700">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">El Próximo Capítulo: 34 Páginas Llenas de Vida</h2>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Tu amor por los libros es un reflejo de tu alma, siempre buscando historias, conocimiento y nuevas perspectivas. Cada libro que abres es un viaje, una aventura, una conversación íntima con el mundo. Hoy, Juandi, no solo celebramos tu cumpleaños, sino el inicio de un nuevo y emocionante capítulo en el libro de tu vida. El capítulo 34 apenas comienza, y estoy absolutamente seguro/a de que será una narrativa espectacular, llena de giros inesperados, personajes memorables y momentos que te dejarán sin aliento.
+                <br><br>
+                Que este nuevo ciclo esté repleto de aprendizajes profundos, de risas contagiosas, de momentos de paz y de esa sabiduría que solo los años y las experiencias pueden traer. Que cada página de tu futuro esté escrita con tinta de felicidad y propósito.
+                <span class="text-yellow-300 font-semibold block mt-6 text-2xl animate-pulse-light">¡Te quiero muchísimo!</span>
+            </p>
+        </section>
+
+        <section class="fade-in-section text-center py-16">
+            <h2 class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 mb-8">Un Mensaje Profundo Desde el Corazón</h2>
+            <p class="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-loose">
+                Mi querido Juandi, en este día tan significativo, mi deseo más profundo es que el universo conspire a tu favor para que encuentres todo aquello que te nutre, te eleva y te hace sentir plenamente vivo. Que cada amanecer sea una promesa de nuevas oportunidades y cada atardecer, un dulce recordatorio de los logros y la belleza del día.
+                <br><Fbr>
+                Sé que a veces la vida puede ser exigente y los caminos se tornan difíciles, pero recuerda siempre la fuerza y la resiliencia que habitan en ti. Eres una persona de una profundidad y sensibilidad inigualables, capaz de amar con intensidad y de ver el mundo con una perspectiva única. Esas cualidades son un tesoro.
+                <br><br>
+                Deseo de todo corazón que
+                <span class="font-bold text-yellow-300 text-3xl md:text-4xl block mt-6 mb-6 animate-pulse-light">
+                    encuentres iluminación, alegría, paz y un amor interminable.
+                </span>
+                <br>
+                Que tu viaje esté lleno de descubrimientos fascinantes, de amistades que te brinden calor, de momentos de pura felicidad que te hagan reír hasta que te duela el estómago y de silencios contemplativos que te conecten con tu esencia más pura. Que cada obstáculo se convierta en un escalón, cada desafío en una lección, y cada sueño, en una realidad tangible. Que la vida te trate con la ternura y la generosidad que te mereces. Gracias por ser tú, por tu amistad, por tu existencia.
+                <span class="text-pink-300 font-bold block mt-8 text-3xl animate-pulse-light">¡Te quiero muchísimo, Juandi, más de lo que las palabras pueden expresar!</span>
+                <span class="block mt-4 text-2xl text-purple-200 animate-pulse-light">Te quiero. Te quiero. Te quiero.</span>
+            </p>
+        </section>
+
+    </div>
+
+    <footer class="text-center p-8 mt-12 border-t border-gray-700">
+        <p class="text-gray-500">Hecho con el corazón por tu amiga especial, Z. ❤️</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const playPrompt = document.getElementById('play-prompt');
+            const audio = document.getElementById('birthday-song');
+            
+            function startMusic() {
+                if (audio) {
+                    audio.volume = 0.5;
+                    audio.play();
+                }
+                if (playPrompt) {
+                    playPrompt.style.opacity = '0';
+                    setTimeout(() => {
+                        if (playPrompt) playPrompt.style.display = 'none';
+                    }, 500);
+                }
+                document.body.removeEventListener('click', startMusic);
+                document.body.removeEventListener('touchstart', startMusic);
+            }
+
+            document.body.addEventListener('click', startMusic);
+            document.body.addEventListener('touchstart', startMusic);
+
+            const sections = document.querySelectorAll('.fade-in-section');
+
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 }); 
+
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            } else {
+                sections.forEach(section => {
+                    section.classList.add('is-visible');
+                });
+            }
+
+            const canvas = document.getElementById('rain-canvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let drops = [];
+                let w, h;
+
+                function resizeCanvas() {
+                    w = canvas.width = window.innerWidth;
+                    h = canvas.height = window.innerHeight;
+                }
+                window.addEventListener('resize', resizeCanvas);
+                
+                function createDrops() {
+                    drops = [];
+                    let dropsCount = 200;
+                    for (let i = 0; i < dropsCount; i++) {
+                        drops.push({
+                            x: Math.random() * w,
+                            y: Math.random() * h,
+                            len: Math.random() * 2 + 3,
+                            speed: Math.random() * 2 + 1,
+                            color: 'rgba(173, 216, 230, 0.5)'
+                        });
+                    }
+                }
+
+                function draw() {
+                    ctx.fillStyle = "rgba(10, 10, 20, 0.1)";
+                    ctx.fillRect(0, 0, w, h);
+
+                    ctx.lineWidth = 1;
+                    for (let drop of drops) {
+                        ctx.beginPath();
+                        ctx.moveTo(drop.x, drop.y);
+                        ctx.lineTo(drop.x, drop.y + drop.len);
+                        ctx.strokeStyle = drop.color;
+                        ctx.stroke();
+
+                        drop.y += drop.speed;
+
+                        if (drop.y > h) {
+                            drop.y = -drop.len;
+                            drop.x = Math.random() * w;
+                        }
+                    }
+                    requestAnimationFrame(draw);
+                }
+                
+                resizeCanvas();
+                createDrops();
+                draw();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
